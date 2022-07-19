@@ -20,3 +20,18 @@ body {
   width: 400px;
   background-color: #fff;
 }
+.poll .question {
+  border-bottom: 2px solid #eee;
+}
+.poll .answers .answer {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  line-height: 40px;
+  color: #111;
+  margin-bottom: 10px;
+  border: 2px solid #d4d4d4;
+  border-radius: 10px;
+  cursor: pointer;
+}
