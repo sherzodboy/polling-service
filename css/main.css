@@ -558,6 +558,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -590,11 +594,12 @@ video {
 body {
   font-family: sans-serif;
   background-color: #f0f5ff;
+  height: 200vh;
 }
 
 .poll {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
@@ -640,5 +645,88 @@ body {
   height: 100%;
   background-color: #ccd8f1;
   z-index: -1;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.form {
+  font-weight: bold;
+  position: absolute;
+  top: 45%;
+  left: 32%;
+  border-radius: 15px;
+  margin: 150px auto;
+  width: 500px;
+  height: 230px;
+  background-color: #F0F5FF;
+}
+
+.box {
+  margin: 0 20px;
+  padding: 10px 20px;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+.box-legend {
+  font-size: 15px;
+  color: rgb(110, 13, 13);
+  padding: 15px 25px;
+  font-family: monospace;
+  text-align: center;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-text {
+  font-size: 16px;
+  color: rgb(6, 6, 32);
+  margin-left: 10px;
+}
+
+.my-radio {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid #444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio:checked + .my-radio {
+  border: 2px solid red;
+}
+
+.radio:checked + .my-radio::before {
+  opacity: 1;
+}
+
+.my-radio::before {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgb(11, 201, 11);
+  opacity: 0;
 }

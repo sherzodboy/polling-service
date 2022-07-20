@@ -2,9 +2,9 @@
 
 let poll = {
   question: "What is your favourite programming language?",
-  answers: ["Html", "Css", "Javascript", "React.js"],
+  answers: ["Html", "Css", "Bootstrap", "Javascript", "React.js"],
   pollCount: 20,
-  answersWeight: [17, 16, 15, 14],
+  answersWeight: [19, 20, 18, 14, 16],
   selectedAnswer: -1,
 };
 
