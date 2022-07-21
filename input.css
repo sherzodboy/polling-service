@@ -10,56 +10,110 @@
 
 body {
   font-family: sans-serif;
-  background-color: #f0f5ff;
-  height: 200vh;
+  background-color: #d2d7e4;
 }
-.poll {
-   position: absolute;
-   top: 35%;
-   left: 50%; 
-  transform: translate(-50%, -50%);
-  width: 400px;
-  background-color: #fff;
+
+.wrapper {
+  margin: 50px auto;
 }
-.poll .question {
-  border-bottom: 2px solid #eee;
+
+.poll-area {
+  margin: 20px 0 15px 0;
 }
-.poll .answers .answer {
-  position: relative;
-  width: 100%;
-  height: 40px;
-  padding: 0 10px;
-  line-height: 40px;
-  color: #111;
+
+.poll-area label {
+  display: block;
+  border: 2px solid #e6e6e6;
+  border-radius: 5px;
   margin-bottom: 10px;
-  border: 2px solid #d4d4d4;
-  border-radius: 10px;
-  cursor: pointer;
+  padding: 8px 15px;
+  transition: all 0.3s linear;
 }
 
-.poll .answers .answer.selected {
-  border: 2px solid #8f9fe8;
+label.selected {
+  border-color: navy;
 }
 
-.poll .answers .answer span.percentage-value {
+label .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+label .row .column {
+  display: flex;
+  align-items: center;
+}
+
+label .row .circle {
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
+  display: block;
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+}
+
+label.selected .row .circle {
+  background-color: navy;
+}
+
+.row .circle::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  right: 0px;
-  width: 40px;
-  transform: translateY(-50%);
-  color: #111;
-  font-size: 15px;
+  height: 10px;
+  width: 10px;
+  background-color: #ccc;
+  top: 2px;
+  left: 2px;
+  border-radius: inherit;
+  display: none;
 }
 
-.poll .answers .answer span.percentage-bar {
+label.selected .row .circle::after {
+  display: block;
+  background-color: navy!important;
+}
+
+label:hover .row .circle::after {
+  display: block;
+  background-color: #e6e6e6;
+}
+
+label .row .percent {
+  display: none;
+}
+
+label .row span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+label .progress {
+  height: 5px;
+  width: 100%;
+  position: relative;
+  margin: 8px 0 3px 0;
+  border-radius: 30px;
+  background-color: #f0f0f0;
+  display: none;
+}
+
+label .progress::after {
+  content: "";
   position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 0%;
   height: 100%;
-  background-color: #ccd8f1;
-  z-index: -1;
-  transition: all 0.3s ease-in;
+  width: calc(1% * var(--w));
+  border-radius: inherit;
+  background-color: #ccc;
+}
+
+label.selected .progress::after {
+  background-color: navy;
+}
+
+label.selectall :is(.percent, .progress){
+  display: block;
 }
 
 .visually-hidden {
@@ -77,24 +131,21 @@ body {
 }
 .form {
   font-weight: bold;
-  position: absolute;
-  top: 100%;
-  left: 50%; 
-  transform: translate(-50%, -50%);
+  margin: 50px auto;
   border-radius: 15px;
   width: 500px;
   height: 230px; 
-  background-color: #F0F5FF;
+  background-color: #fff;
 }
 .box {
   margin: 0 20px;
   padding: 10px 20px;
-  border: 1px solid red;
+  border: 2px solid #D2D7E4;
   border-radius: 10px;
 }
 .box-legend {
   font-size: 15px;
-  color: rgb(110, 13, 13);
+  color: navy;
   padding: 15px 25px;
   font-family: monospace;
   text-align: center;
@@ -120,7 +171,7 @@ body {
   justify-content: center;
 }
 .radio:checked + .my-radio {
-  border: 2px solid red;
+  border: 1px solid navy;
 }
 .radio:checked + .my-radio::before {
   opacity: 1;
@@ -128,20 +179,18 @@ body {
 .my-radio::before {
   position: absolute;
   content: "";
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background-color: rgb(11, 201, 11);
+  background-color: navy;
   opacity: 0;
 }
 
-.wrapper {
-  position: absolute;
-  top: 150%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: inline-block;
-  background-color: rgb(152, 222, 231);
+.checkbox-div {
+  margin: 50px auto;
+  width: 400px;
+  border-radius: 20px;
+  background-color: #fff;
   padding: 50px 70px;
 }
 

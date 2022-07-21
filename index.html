@@ -9,11 +9,57 @@
 </head>
 <body>
 
+    <div class="wrapper w-96 p-8 bg-white rounded-2xl">
+      <header class="font-bold text-2xl">Test your knowledge</header>
+      <div class="poll-area">
 
-    <div class="pol-center poll font-bold rounded-lg shadow-2xl">
-      <div class="question p-5 text-lg"></div>
-      <div class="answers p-5"></div>
+        <label class="options-label">
+          <div class="row">
+            <div class="column">
+              <span class="circle"></span>
+              <span class="text">Html</span>
+            </div>
+            <span class="percent">72%</span>
+          </div>
+          <div class="progress" style="--w:72;" ></div>
+        </label>
+
+        <label class="options-label">
+          <div class="row">
+            <div class="column">
+              <span class="circle"></span>
+              <span class="text">Css</span>
+            </div>
+            <span class="percent">77%</span>
+          </div>
+          <div class="progress" style="--w:77;"></div>
+        </label>
+
+        <label class="options-label">
+          <div class="row">
+            <div class="column">
+              <span class="circle"></span>
+              <span class="text">Javascript</span>
+            </div>
+            <span class="percent">60%</span>
+          </div>
+          <div class="progress" style="--w:60;"></div>
+        </label>
+
+        <label class="options-label">
+          <div class="row">
+            <div class="column">
+              <span class="circle"></span>
+              <span class="text">ReactJs</span>
+            </div>
+            <span class="percent">57%</span>
+          </div>
+          <div class="progress" style="--w:57;"></div>
+        </label>
+
+      </div>
     </div>
+
 
     <form class="form mb-10">
       <fieldset class="box">
@@ -36,7 +82,7 @@
       </fieldset>
     </form>
 
-    <div class="wrapper font-bold">
+    <div class="checkbox-div font-bold">
         <input type="checkbox" id="option-all" onchange="checkAll(this)">
         <label for="option-all">Select All</label>
         <br>
